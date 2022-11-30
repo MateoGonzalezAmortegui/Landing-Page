@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<header>
+  <nav>
+    <div class="container-nav">
+      <div class="container-nav__desk">
+        <div class="nav-logo">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        
+        <div class="nav-links inactive">
+          <p>Features</p>
+          <p>Pricing</p>
+          <p>Resources</p>
+        </div>
+      </div>
+
+      <div onclick="menu_mobile()" class="nav-menu--mobile">
+        <span></span>
+      </div>
+
+      <div class="nav-buttons inactive">
+        <p>Login</p>
+        <button class="hovers">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="mobile-menu inactive">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-container__h2-line">
+        <h2>Features</h2>
+        <h2>Pricing</h2>
+        <h2>Resources</h2>
+      </div>
+      
+
+      <div class="mobile-menu-container__btn-line">
+        <h2>Login</h2>
+        <button class="hovers">Sign Up</button>
+      </div>
+    </div>
+  </section> 
+
+</header>
+
+<main>
+  <div class="grid-main">
+    <section class="main-image-container">
+      <div class="main-image">
+      </div>
+    </section>
+
+    <section class="fisrt-container">
+      <div class="fisrt-container__tittle">
+        <h1>More than just shorter links</h1>
+      </div>  
+
+      <div class="fisrt-container__p">
+        <p>Build your brand's recognition and get detailed insights 
+          on how your links are performing.</p>
+      </div>
+
+      <button class="button--circle hovers">Get Started</button>
+    </section>
+  </div>
+
+  <section class="search">
+    <div class="search-box">
+      <div class="search-box__container">
+        <input class="search-box__input" type="text" placeholder="Shorten a link here...">
+        
+        <small class="search-box__text inactive">Please add a link</small>
+
+        <button class="hovers clipboard" onclick="searching()">Shorten It!</button>
+      </div>
+    </div>
+
+
+    <div class="results">
+      <!--JS CODE-->
+    </div>
+    
+    
+    <section class="statistics">
+      <div class="statistics-box">
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our 
+          advanced statistics dashboard.</p>
+      </div>
+    </section>
+
+    <section class="statistics-container">
+      <article class="statistics-container__card">
+        <div class="statistics-container__logo">
+          <span class="logo1"></span>
+        </div>
+
+        <h2>Brand Recognition</h2>
+        <p>Boost your brand recognition with each click. Generic links don’t 
+            mean a thing. Branded links help instil confidence in your content.</p>
+      </article>
+
+      <div class="card2">
+        <article class="statistics-container__card">
+          <div class="statistics-container__logo">
+            <span class="logo2"></span>
+          </div>
+
+          <h2>Detailed Records</h2>
+          <p>Gain insights into who is clicking your links. Knowing when and where 
+            people engage with your content helps inform better decisions.</p>
+        </article>
+      </div>
+
+      <div class="card3">
+        <article class="statistics-container__card">
+          <div class="statistics-container__logo">
+            <span class="logo3"></span>
+          </div>
+
+          <h2>Fully Customizable</h2>
+          <p>Improve brand awareness and content discoverability through customizable 
+            links, supercharging audience engagement.</p>
+        </article>
+      </div>
+
+    </section>
+  </section>
+
+  <section class="last">
+    <div class="last-container">
+      <h2>Boost your links today</h2>
+      <button class="hovers">Get Started</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <section class="footer-container">
+    <div class="footer-container__tittle">
+      <h2>Shortly</h2>
+    </div>
+
+    <div>
+      <h3>Features</h3>
+      <ol>
+        <li>Link Shortening</li>
+        <li>Branded Links</li>
+        <li>Analytics</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3>Resources</h3>
+      <ol>
+        <li>Blog</li>
+        <li>Developers</li>
+        <li>Support</li>
+      </ol>
+    </div>
+
+    <div>
+      <h3>Company</h3>
+      <ol>
+        <li>About</li>
+        <li>Our Team</li>
+        <li>Careers</li>
+        <li>Contact</li>
+      </ol>
+    </div>
+
+    <div class="footer-container__icons">
+      <span class="icon1"><a href="https://github.com/MateoGonzalezAmortegui"></a></span>
+      <span class="icon2"><a href="https://github.com/MateoGonzalezAmortegui"></a></span>
+      <span class="icon3"><a href="https://github.com/MateoGonzalezAmortegui"></a></span>
+      <span class="icon4"><a href="https://github.com/MateoGonzalezAmortegui"></a></span>
+    </div>
+  </section>
+</footer>  
+
+  <div class="attribution">
+    <div>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    </div>
+    <div>
+      Coded by <a href="#">Mateo Gonzalez Amortegui</a>
+    </div>
+  </div>  
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

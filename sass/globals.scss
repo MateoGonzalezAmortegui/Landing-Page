@@ -1,0 +1,72 @@
+//* Primary
+
+$Cyan: hsl(180, 66%, 49%);
+$Dark-Violet: hsl(257, 27%, 26%);
+
+//* Secondary
+
+$Red: hsl(0, 87%, 67%);
+
+//* Neutral
+
+$Gray: hsl(0, 0%, 75%);
+$Grayish-Violet: hsl(257, 7%, 63%);
+$Very-Dark-Blue: hsl(255, 11%, 22%);
+$Very-Dark-Violet: hsl(260, 8%, 14%);
+$neutral-light-gray: hsl(0, 10%, 94%);
+$button-hover:#7edae1;
+
+//* Images
+$image-main:url('../images/illustration-working.svg');
+$icon-menu--mobile:url('../images/reorder_black_24dp.svg');
+$image-search:url('../images/bg-shorten-mobile.svg');
+$image-statistics:url('../images/icon-brand-recognition.svg');
+$image-indicator:url('../images/icon-detailed-records.svg');
+$image-arts:url('../images/icon-fully-customizable.svg');
+$image-footer:url('../images/bg-boost-mobile.svg');
+$icon-facebook:url('../images/icon-facebook.svg');
+$icon-titer:url('../images/icon-twitter.svg');
+$icon-pinter:url('../images/icon-pinterest.svg');
+$icon-instagram:url('../images/icon-instagram.svg');
+$image-search-desk:url('../images/bg-shorten-desktop.svg');
+$image-footer-desk:url('../images/bg-boost-desktop.svg');
+
+//*letters
+$small: 1.8rem;
+
+@mixin background-image-contain($image) {
+    background-image: $image;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@mixin background-image-cover($image) {
+    background-image: $image;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin button {
+    height: 50px;
+    border-radius: 30px;
+    background-color: $Cyan;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}

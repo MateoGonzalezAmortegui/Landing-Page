@@ -1,0 +1,121 @@
+@use "./globals.scss";
+
+.inactive{
+    display: none;
+}
+
+
+header{
+    width: 100%;
+    height: 10vh;
+}
+nav{
+    padding-top: 34px;
+}
+.nav{
+    &-logo img{
+        width: 120px;
+        height: 35px;
+    }
+
+    &-menu--mobile span{
+        display: inline-block;
+        @include globals.background-image-contain(globals.$icon-menu--mobile);
+        width: 30px;
+        height: 30px;
+    }
+
+    &-links{
+        padding-left: 20px;
+        color: globals.$Gray;
+
+        & p{
+            display: inline-block;
+            padding-left: 20px;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+    }
+
+    &-buttons{
+        align-items: center;
+
+        & p{
+            color: globals.$Gray;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        & button{
+            margin-left: 20px;
+            @include globals.button;
+            width: 90px;
+            height: 34px;
+            cursor: pointer;
+            font-size: 1.4rem;
+        }
+    }
+}
+.mobile-menu{
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 16px;
+    
+    &-container{
+        display: inline-block;    
+        width: 90%;
+        height: 360px;
+        background-color: globals.$Dark-Violet;
+        border-radius: 10px;
+        padding: 20px 20px 0;
+
+        &__h2-line{
+            border-bottom: 1px solid globals.$Grayish-Violet;
+            padding-top: 10px;
+
+            & h2{
+                margin-bottom: 30px;
+            }
+        }
+
+        &__btn-line{
+            padding-top: 30px; 
+
+            & button{
+                margin-top: 30px;
+                width: 100%;
+                @include globals.button;
+            }
+        }
+    }
+}
+
+.container-nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+
+    &__desk{
+        display: flex;
+        align-items: center;
+    }
+}
+nav p:hover{
+    color: globals.$Very-Dark-Violet;
+}
+
+
+@media screen and (min-width:1000px) {
+    .nav-menu--mobile{
+        display: none;
+    }
+    .nav-links{
+        display:flex;
+    }
+    .nav-buttons{
+        display: flex;
+    }
+}

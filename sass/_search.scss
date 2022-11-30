@@ -1,0 +1,141 @@
+@use "./globals.scss";
+
+.search{
+    width: 100%;
+    background-color: globals.$neutral-light-gray;
+    position: relative;
+    padding-top: 1px;
+
+    &-box{
+        width: 90%;
+        margin: 0 auto;
+        @include globals.background-image-cover(globals.$image-search);
+        background-size: 50%;
+        background-color: globals.$Dark-Violet;
+        border-radius: 8px;
+        position: absolute;
+        left: 0; 
+	    right: 0;
+        top: -80px;
+
+        &__input{
+            display: inline-block;
+            border-radius: 4px;
+            height: 50px;
+            padding: 1.5rem;
+            border: 3px solid transparent;
+            font-size: globals.$small;
+            font-weight: bold;
+            color: globals.$Gray;
+        }
+        
+        &__container{
+            width: 90%;
+            display: grid;
+            grid-template-rows: 1fr 0.5fr 1fr;
+            margin: 0 auto;
+            padding: 20px 0 20px;
+
+            & button{
+                @include globals.button;
+                border-radius: 4px;
+                cursor: pointer;
+                grid-row-start: 3;
+            }
+        }
+
+        &__text{
+            color: globals.$Red;
+            font-size: 1.2rem;
+        }
+        
+    }
+}
+
+.results{
+    width: 100%;
+    margin-top: 120px;
+
+    &-box{
+        width: 90%;
+        margin: 0 auto 20px;
+        background-color: white;
+        border-radius: 8px;
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+
+        &__link{
+            margin: 0 auto;
+            height: 56px;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            font-size: globals.$small;
+            border-bottom: 2px solid globals.$neutral-light-gray;
+        }
+
+        &__copy{
+            font-size: globals.$small;
+            color: globals.$Cyan; 
+            margin: 0 auto;
+            height: 56px;
+            width: 90%;
+            display: flex;
+            align-items: center;
+        }
+
+        &__button{
+        padding-bottom: 14px;
+        width: 90%;
+        margin: 0 auto;
+
+            & button{
+                @include globals.button; 
+                border-radius: 4px;
+                cursor: pointer;  
+                width: 100%;  
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px){
+    .search-box__container{
+        grid-template-columns: 1fr 0.3fr;
+        grid-template-rows: 1fr 0.5fr;
+        padding-bottom: 0;
+
+        & button{
+            grid-row-start: 1;
+            grid-column-start: 2;
+            margin-left: 25px;
+        }
+    }
+    .search-box{
+        top: -48px;
+        @include globals.background-image-cover(globals.$image-search-desk);
+    }
+    .results{
+        margin-top: 78px;
+    }
+
+    .results-box{
+        grid-template-columns: 0.8fr 0.5fr 0.2fr;
+        grid-template-rows: 1fr;
+        align-items: center;
+
+        &__copy{
+            justify-content: end;
+        }
+
+        &__button{
+            grid-row-start: 1;
+            grid-column-start: 3;
+            padding-top: 14px;
+        }
+
+        &__link{
+            border-bottom: 0;
+        }
+    }
+}

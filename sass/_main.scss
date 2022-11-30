@@ -1,0 +1,79 @@
+@use "./globals.scss";
+
+.main-image{
+    &-container{
+        margin-top: 22px;
+        height: 368px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @include globals.background-image-cover(globals.$image-main);
+    background-position-x: 16px;
+    width: 100%;
+    max-width: 445px;
+    height: 100%;
+    z-index: -4;
+}
+
+.fisrt{
+    &-container{
+        margin: 20px auto;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        &__tittle h1{
+            color: globals.$Dark-Violet;
+            font-size: 4.4rem;
+            font-weight: 700;
+            line-height: 4.4rem;
+        }
+
+        &__p{
+            margin-top: 10px;
+            color: globals.$Grayish-Violet;  
+            font-size: globals.$small;
+            line-height: 2.8rem;
+            font-weight: 500;
+        }
+
+        button{
+            margin-top: 30px;
+        }
+    }
+}
+.button--circle{
+    width: 180px;
+    @include globals.button;
+    cursor: pointer;
+}
+
+.grid-main{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-bottom: 160px;
+}
+
+@media screen and (min-width:1000px) {
+    .grid-main{
+        grid-template-columns: 1.5fr 1fr;
+        margin: 33px 0 130px;
+    }
+    .main-image-container{
+        grid-column-start: 2;
+    }
+    .fisrt-container{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        text-align: left;
+        width: 88%;
+        margin: 0 auto;
+        align-items: initial;
+    }
+    
+}
